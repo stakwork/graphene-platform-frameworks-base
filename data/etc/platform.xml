@@ -377,4 +377,8 @@
          devices. -->
     <allow-in-power-save package="com.android.devicelockcontroller" />
     <allow-in-data-usage-save package="com.android.devicelockcontroller" />
+
+    <!-- Sphinx Chat: exempt from Doze and App Standby so that background account restore
+         (MQTT-based contact/message sync) is not throttled or killed mid-process. -->
+    <allow-in-power-save package="chat.sphinx.v2" />
 </permissions>
