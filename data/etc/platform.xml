@@ -421,4 +421,11 @@
          devices. -->
     <allow-in-power-save package="com.android.devicelockcontroller" />
     <allow-in-data-usage-save package="com.android.devicelockcontroller" />
+
+    <!-- Peel (com.sphinx.peel): exempt from Doze and App Standby power restrictions so that
+         background message/payment sync and push handling are not throttled or deferred.
+         NOTE: DeviceIdleController only honours this for apps preinstalled in the system image
+         (it looks the package up with MATCH_SYSTEM_ONLY), so Peel must be shipped as a system app.
+         If the Peel applicationId changes, update the package name here. -->
+    <allow-in-power-save package="com.sphinx.peel" />
 </permissions>
